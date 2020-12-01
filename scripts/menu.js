@@ -14,7 +14,9 @@ function hideMenu() {
   play = true;
   canvas.focus();
   menu.classList.add("menu_hidden");
-  menuSound.fadeWith(gameSound, 2000);
+  menuSound.fadeOut(100);
+  gameSound.setVolume(15);
+  gameSound.play();
   gameSound.loop();
 };
 

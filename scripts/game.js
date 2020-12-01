@@ -19,10 +19,7 @@ const gameSound = new buzz.sound("./audios/YellowForest.ogg");
 const winSound = new buzz.sound("./audios/NewHope.ogg");
 const loseSound = new buzz.sound("./audios/GameOver.ogg");
 
-menuSound.setVolume(30);
-gameSound.setVolume(30);
-winSound.setVolume(30);
-loseSound.setVolume(30);
+menuSound.setVolume(15);
 
 if (!buzz.isOGGSupported()) {
   alert("Your browser doesn't support OGG Format.");
@@ -134,13 +131,15 @@ function sketchProc(processing) {
     };
     if (lifes == 0) {
       gameSound.fadeOut(100);
+      loseSound.setVolume(15);
       loseSound.play();
       loseSound.loop();
     }
     else if (points == 135) {
       gameSound.fadeOut(100);
+      winSound.setVolume(15);
       winSound.play();
-      winSound.play();
+      winSound.loop();
     };
   };
 
