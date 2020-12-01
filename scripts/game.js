@@ -19,10 +19,10 @@ const gameSound = new buzz.sound("./audios/YellowForest.ogg");
 const winSound = new buzz.sound("./audios/NewHope.ogg");
 const loseSound = new buzz.sound("./audios/GameOver.ogg");
 
-menuSound.setVolume(50);
-gameSound.setVolume(50);
-winSound.setVolume(50);
-loseSound.setVolume(50);
+menuSound.setVolume(30);
+gameSound.setVolume(30);
+winSound.setVolume(30);
+loseSound.setVolume(30);
 
 if (!buzz.isOGGSupported()) {
   alert("Your browser doesn't support OGG Format.");
