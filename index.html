@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Antic Slab' rel='stylesheet'>
+  </head>
+  <body>
+    <table class=tabla>
+      <tr>
+        <th>Puntuación</th>
+      </tr>
+      <tr>
+        <td id="score">0</td>
+      </tr>
+    </table>
+
+    <div class="boton">
+      <p>
+        <input type="image" src="./images/repeat.png" width="40" height="40" onclick="location.reload()" />
+      </p>
+    </div>
+
+    <br>
+
+    <div id="menu" class="menu">
+      <div class="menu_container">
+        <h1 class="titulo_menu">Menú</h1>
+        <button id="firstButton" class="boton_menu" onclick="hideMenu()">
+          Jugar
+        </button>
+        <button id="secondButton" class="boton_menu" onclick="showInstructions()">
+          Instrucciones
+        </button>
+        <br>
+        <br>
+        <div id="instructions">
+          Debes obtener todas las monedas para ganar. Utiliza las flechas del teclado para mover a Mask y conseguir tu objetivo, pero no te dejes alcanzar del agua, si lo haces perderás una vida, si pierdes 3 vidas, el juego habrá acabado. ¡Buena suerte!
+          <button id="back" class="boton_menu" onclick="showMenu()">
+            Atrás
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script src="scripts/libraries/functional-light.js"></script>
+    <script src="scripts/libraries/processing.js"></script>
+    <script src="scripts/libraries/fl-extended.js"></script>
+    <script src="scripts/libraries/buzz.js"></script>
+    <script stc="scripts/libraries/buzz.min.js"></script>
+
+    <script src="scripts/map.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/statistics.js"></script>
+    <script src="scripts/water.js"></script>
+  </body>
+</html>
