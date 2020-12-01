@@ -1,10 +1,10 @@
 // Importamos la librería 'functional-light'
 const { append, cons, first, isEmpty, isList, length, rest, map } = require("fl-extended");
 
-// Tamaño de los objectos en el canvas
+// Tamaño de los objetos en el canvas
 const SIZE = 40;
 
-// El mundo se dibuja en 60 veces por segundo
+// El mundo se dibuja 60 veces por segundo
 const framesPerSecond = 60;
 
 // Almacena el canvas
