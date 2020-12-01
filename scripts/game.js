@@ -19,12 +19,14 @@ const gameSound = new buzz.sound("./audios/YellowForest.ogg");
 const winSound = new buzz.sound("./audios/NewHope.ogg");
 const loseSound = new buzz.sound("./audios/GameOver.ogg");
 
+menuSound.setVolume(50);
+gameSound.setVolume(50);
+winSound.setVolume(50);
+loseSound.setVolume(50);
+
 if (!buzz.isOGGSupported()) {
   alert("Your browser doesn't support OGG Format.");
 };
-
-menuSound.play();
-menuSound.loop();
 
 // Asignaciones para el mapa
 const mapa = {
@@ -96,7 +98,10 @@ function make(data, attribute) {
 function sketchProc(processing) {
   // Esto se llama antes de iniciar el juego
   processing.setup = function() {
-  // Se ejecuta una vez cuando se inicia el juego
+
+    menuSound.play();
+    menuSound.loop();
+    // Se ejecuta una vez cuando se inicia el juego
 
     // Se actualiza 60 veces por segundo
     processing.frameRate(framesPerSecond);
